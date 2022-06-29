@@ -1,4 +1,6 @@
 var movie = [
+  ["Mr. Majnu","zR52MgYhm_Q"],
+  ["Businessman","1a23TLgqdmw"],
   ["Love Story","yklDT_Km15E"],
   ["Kanchana Returns","5N9ICugFEbE"],
   ["Srinivasa Kalyanam","VeoiEqdkKAk"],
