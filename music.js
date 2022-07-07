@@ -1,4 +1,6 @@
 var music = [
+  ["Tera Ghata","0KNk-Joi-NM"],
+  ["Na Hona Tumse Door","dyu3LmA4yJY"],
   ["Mein Ishq Tera Ban Jaau","F5gJp4iSMQs"],
   ["Itna Chahu Tumhe","kaW7jEKw1b0"],
   ["Bekarar Dil Mera","HPnvMKvrijA"],
