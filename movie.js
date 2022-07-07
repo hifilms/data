@@ -1,4 +1,6 @@
 var movie = [
+  ["Gangs of Wasseypur 2","xndCrKr3ha"],
+  ["Gangs of Wasseypur","dz3uCM-MrGY"],
   ["Mr. Majnu","zR52MgYhm_Q"],
   ["Businessman","1a23TLgqdmw"],
   ["Love Story","yklDT_Km15E"],
