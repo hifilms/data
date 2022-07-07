@@ -1,4 +1,6 @@
 var movie = [
+  ["FRIENDS NEVER DIE","zVtPRIWVsa4"],
+  ["Chalo","y5CJhgYf-Hc"],
   ["Puli","miCxGYv1m6o"],
   ["Hera Pheri","TIQ5hrfermg"],
   ["Gangs of Wasseypur 2","xndCrKr3ha0"],
