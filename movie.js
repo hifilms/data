@@ -1,7 +1,7 @@
 var movie = [
   ["Puli","miCxGYv1m6o"],
   ["Hera Pheri","TIQ5hrfermg"],
-  ["Gangs of Wasseypur 2","xndCrKr3ha"],
+  ["Gangs of Wasseypur 2","xndCrKr3ha0"],
   ["Gangs of Wasseypur","dz3uCM-MrGY"],
   ["Mr. Majnu","zR52MgYhm_Q"],
   ["Businessman","1a23TLgqdmw"],
