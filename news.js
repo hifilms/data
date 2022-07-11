@@ -2,5 +2,5 @@ var newsz = ["nyd-xznCpJc","H8U3UwRvTBs","GE_SfNVNyqk","Xmm3Kr5P1Uw","IuDb_Aopq7
 var news =[
   ["nyd-xznCpJc","abp","",""],
   ["H8U3UwRvTBs","news18","",""],
-  ["GE_SfNVNyqk","wd","",""],
+  ["GE_SfNVNyqk","dw","",""],
 ]
