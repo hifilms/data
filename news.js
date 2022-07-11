@@ -1,7 +1,23 @@
-var newsz = ["nyd-xznCpJc","H8U3UwRvTBs","GE_SfNVNyqk","Xmm3Kr5P1Uw","IuDb_Aopq7I","QmERLqjlHdo","EguYDSbSBZM","KyUT37gNm5w","qfrocHBy6RQ","TD0A7fHAxKw","MN8p-Vrn6G0","JiVA-dQ6dsc","wBhSCUEMbg4","e3JMsqUEwWk","9Auq9mYxFEE","WB-y7_ymPJ4","h3MuIUNCCzI","TdQShwOfWSA"]
+var newsz = ["nyd-xznCpJc","H8U3UwRvTBs","GE_SfNVNyqk","Xmm3Kr5P1Uw","IuDb_Aopq7I","QmERLqjlHdo","EguYDSbSBZM",
+             "KyUT37gNm5w","qfrocHBy6RQ","TD0A7fHAxKw","MN8p-Vrn6G0","JiVA-dQ6dsc","wBhSCUEMbg4","e3JMsqUEwWk",
+             "9Auq9mYxFEE","WB-y7_ymPJ4","h3MuIUNCCzI","TdQShwOfWSA"]
 var news =[
   ["nyd-xznCpJc","abp","",""],
   ["H8U3UwRvTBs","news18","",""],
   ["GE_SfNVNyqk","dw","",""],
   ["Xmm3Kr5P1Uw","indiatv","",""],
+  ["IuDb_Aopq7I","ddindia","",""],
+  ["QmERLqjlHdo","ddnews","",""],
+  ["EguYDSbSBZM","republic","",""],
+  ["KyUT37gNm5w","wion","",""],
+  ["qfrocHBy6RQ","republicbharat","",""],
+  ["TD0A7fHAxKw","cnbcawaaz","",""],
+  ["MN8p-Vrn6G0","ndtvIndia","",""],
+  ["-aNLNkmqtsg","timesnow","",""],
+  ["wBhSCUEMbg4","zeenews","",""],
+  ["17jmX4per7c","tv9bharatvarsh","",""],
+  ["9Auq9mYxFEE","skynews","",""],
+  ["WB-y7_ymPJ4","ndtv","",""],
+  ["h3MuIUNCCzI","France24","",""],
+  ["TdQShwOfWSA","nbc2","",""],
 ]
