@@ -1,4 +1,12 @@
 var movie = [
+  ["Khiladi 786","hXk3pP0q-MU"],
+  ["Tevar","8G7g1BvyCj0"],
+  ["Housefull","wFtF1zedwbw"],
+  ["Water Monster","AvYsnn4iD7E"],
+  ["Boy","YidZM8pmhy8"],
+  ["SNAKE KING","f_YgAygSe8o"],
+  ["Commercial Fighter","AzFqq5lhwLA"],
+  ["MERI MAA","3---ghjeBHU"],
   ["FRIENDS NEVER DIE","zVtPRIWVsa4"],
   ["Chalo","y5CJhgYf-Hc"],
   ["Puli","miCxGYv1m6o"],
