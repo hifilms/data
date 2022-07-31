@@ -5,7 +5,6 @@ var movie = [
   ["Water Monster","AvYsnn4iD7E"],
   ["Boy","YidZM8pmhy8"],
   ["SNAKE KING","f_YgAygSe8o"],
-  ["Commercial Fighter","AzFqq5lhwLA"],
   ["MERI MAA","3---ghjeBHU"],
   ["FRIENDS NEVER DIE","zVtPRIWVsa4"],
   ["Chalo","y5CJhgYf-Hc"],
