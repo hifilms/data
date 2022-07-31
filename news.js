@@ -12,7 +12,7 @@ var news =[
   ["MN8p-Vrn6G0","ndtvIndia","",""],
   ["-aNLNkmqtsg","timesnow","",""],
   ["wBhSCUEMbg4","zeenews","",""],
-  ["aC650xB9NNc","news24","",""],
+  ["z6qO20Jx5FI","news24","",""],
   ["9Auq9mYxFEE","skynews","",""],
   ["WB-y7_ymPJ4","ndtv","",""],
   ["h3MuIUNCCzI","France24","",""],
