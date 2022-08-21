@@ -5,7 +5,7 @@ var news =[
   ["Xmm3Kr5P1Uw","indiatv","",""],
   ["IuDb_Aopq7I","ddindia","",""],
   ["QmERLqjlHdo","ddnews","",""],
-  ["EguYDSbSBZM","republic","",""],
+  ["djP1cYWQCW4","republic","",""],
   ["KyUT37gNm5w","wion","",""],
   ["qfrocHBy6RQ","republicbharat","",""],
   ["TD0A7fHAxKw","cnbcawaaz","",""],
