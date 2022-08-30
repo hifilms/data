@@ -18,7 +18,6 @@ var movie = [
   ["Srinivasa Kalyanam","VeoiEqdkKAk"],
   ["Size Zero","jwOFzyZVAhE"],
   ["Kaithi","kaZFBTthNZM"],
-  ["Vikram vedha","q_XbhSo30fs"],
   ["Chennai Central","IA-t8hIDgZ4"],
   ["Asuran","RnZ1hF3tdGg"],
   ["Fidaa","I3o-UeFZFKo"],
