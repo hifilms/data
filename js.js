@@ -1,7 +1,7 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
 		var footerx = "Developed by b roy (v.1.2)";
-		var h1 = ""; //<h1>সুশান্তর ৫০০ বাকি?</h1>
+		var h1 = "<h1>সুশান্তর ৫০০ বাকি?</h1>"; //
 		
 		var vx = [//ADMIN
 			["01) Chotan Halder", 5500],
@@ -19,7 +19,7 @@
 			["13) Sourav Halder", 5500]];
 
 		var vy = [ //EXPENSES
-			["Salary - 6.2.24", 200]];
+			["Salary", 00]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
 			["AS0009 - Amio Sarkar","04.02.2024",5000,50,0,0,0,"13"],
