@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Developed by b roy (v.1.2)";
+		var footerx = "Developed by b roy (v.1.3)";
 		var h1 = "<h1>সুশান্তর ৫০০ বাকি?</h1>"; //
 		
 		var vx = [//ADMIN
