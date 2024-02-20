@@ -22,7 +22,8 @@
 			["Salary", 200]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
-			["AS0010 - Ajay swarnakar","07.02.2024",3000,30,0,300,0,"24"],
+			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,0,0,"26"],
+			["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,0,300,0,"24"],
 			["AS0009 - Amio Sarkar","04.02.2024",5000,50,0,900,0,"11"],    		
    			["AS0008 - Sudip Sarkar","30.01.2024",3000,30,0,450,0,"23"],
 			["AS0007 - Bapi Pramanik","24.01.2024",10000,100,0,2000,0,"22"],
