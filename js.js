@@ -5,26 +5,27 @@
 		
 		var vx = [//ADMIN
 			["01) Chotan Halder", 5500],
-			["02) Biswabyapi Halder", 5500],
+			["02) Biswabyapi Halder", 6000],
 			["03) Suman Biswas", 5500],
-			["04) Prosen Halder", 5500],
-			["05) Amit Halder", 5500],
-			["06) Bikram Halder", 5500],
-			["07) Bappa Mondal", 5500],
+			["04) Prosen Halder", 6000],
+			["05) Amit Halder", 6000],
+			["06) Bikram Halder", 6000],
+			["07) Bappa Mondal", 6000],
 			["08) Ramprasad Halder", 5500],
 			["09) Subrata Mondal", 5500],
 			["10) Upanada Halder", 5500],
 			["11) Pravat Biswas", 5500],
-			["12) Rajib Mondal", 5500],
+			["12) Rajib Mondal", 6000],
 			["13) Sourav Halder", 5500]];
 
 		var vy = [ //EXPENSES
-			["Salary - (1)", 200]];
+			["Salary - (January)", 200]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
+			["AS0012 - Subrata Halder","26.02.2024",10000,100,0,0,0,"26"],
 			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,300,0,"25"],
 			["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,0,450,0,"23"],
-			["AS0009 - Amio Sarkar","04.02.2024",5000,50,0,900,0,"11"],    		
+			["AS0009 - Amio Sarkar","04.02.2024",5000,50,0,1350,0,"10"],    		
    			["AS0008 - Sudip Sarkar","30.01.2024",3000,30,0,1500,0,"16"],
 			["AS0007 - Bapi Pramanik","24.01.2024",10000,100,0,2500,0,"21"],
 			["AS0006 - Sushanta Halder","21.01.2024",10000,100,0,2500,200,"21"],
