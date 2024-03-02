@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (01.03.2024)";
+		var footerx = "Last updated (02.03.2024)";
 		var h1 = ""; //<h1>সুশান্তর ৫০০ বাকি?</h1>
 		
 		var vx = [//ADMIN
@@ -11,7 +11,7 @@
 			["05) Amit Halder", 6000],
 			["06) Bikram Halder", 6000],
 			["07) Bappa Mondal", 6000],
-			["08) Ramprasad Halder", 5500],
+			["08) Ramprasad Halder", 6000],
 			["09) Subrata Mondal", 5500],
 			["10) Upanada Halder", 5500],
 			["11) Pravat Biswas", 5500],
@@ -19,6 +19,7 @@
 			["13) Sourav Halder", 5500]];
 
 		var vy = [ //EXPENSES
+			["Salary - (February)", 200],
 			["Salary - (January)", 200]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
