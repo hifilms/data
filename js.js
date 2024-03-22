@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (19.03.2024)";
+		var footerx = "Last updated (22.03.2024)";
 		var h1 = "<h1>Ananda 2, sima 1, sushanta 1 কিস্তি বাকি।</h1>"; //
 		
 		var vx = [//ADMIN
@@ -23,8 +23,9 @@
 			["Salary - (January)", 200]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
+			["AS0015 - Sudip Sarkar","22.03.2024",5000,50,0,0,0,"00"],
    			["AS0014 - Amio Sarkar","14.03.2024",3000,30,0,0,0,"00"],
-			["AS0013 - Sudip Sarkar","12.03.2024",5000,50,0,2000,50,"18"],
+			["AS0013 - Sudip Sarkar","12.03.2024",5000,50,300,5000,50,"Paid"],
 			["AS0012 - Subrata Halder","26.02.2024",10000,100,0,1500,0,"23"],
 			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,600,0,"24"],
 			["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,0,900,0,"20"],
