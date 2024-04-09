@@ -1,6 +1,6 @@
 		var passwordx = "AS0014";
 		
-		var admin = 11900; 
+		var admin = 12000; //bi- 8000, su- 4000 
 
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.interest
