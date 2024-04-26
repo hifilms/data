@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (24.04.2024)";
+		var footerx = "Last updated (26.04.2024)";
 		var h1 = "<h1>Haradhan 4, sushanta 4, Amio 1 কিস্তি বাকি।</h1>"; // 780 anado(f)
 		
 		var vx = [//ADMIN
