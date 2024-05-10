@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (7.05.2024)";
+		var footerx = "Last updated (10.05.2024)";
 		var h1 = "<h1>Haradhan 6, Ananda 2, Amio 3 কিস্তি বাকি।</h1>";780
 		
 		var vx = [//ADMIN
@@ -19,11 +19,13 @@
 			["13) Sourav Halder", 6000]];
 
 		var vy = [ //EXPENSES
+["Salary - (April)", 300]
 			["Salary - (March)", 200],
 			["Salary - (February)", 200],
 			["Salary - (January)", 200]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
+["AS0027 - Suman Halder(gold)","8.05.2024",2000,20,0,0,0,"00"],
 ["AS0026 - Susanto Halder","07.05.2024",8000,80,0,0,0,"00"],
 ["AS0025 - Suman Halder","26.04.2024",3000,30,0,0,0,"00"], 
 ["AS0024 - Chandan halder","26.04.2024",6000,60,0,0,0,"00"],
@@ -36,7 +38,7 @@
 			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,2700,400,"17"],
 			["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,0,1950,50,"13"],
 			["AS0007 - Bapi Pramanik","24.01.2024",10000,100,0,7500,0,"11"],
-			["AS0005 - Bipul Halder","09.01.2024",20000,200,3600,0,0,"00"],
+			["AS0005 - Bipul Halder","09.01.2024",20000,200,4800,0,0,"00"],
 			["AS0003 - Sima Pramanik","11.01.2024",10000,100,0,8500,0,"09"],
 			["AS0002 - Sujoy Halder","05.01.2024",10000,100,0,9000,100,"08"],
 			["AS0001 - Haradhan Halder","03.01.2024",10000,100,0,6000,0,"14"],
