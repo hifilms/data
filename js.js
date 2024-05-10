@@ -19,7 +19,7 @@
 			["13) Sourav Halder", 6000]];
 
 		var vy = [ //EXPENSES
-["Salary - (April)", 300]
+["Salary - (April)", 300],
 			["Salary - (March)", 200],
 			["Salary - (February)", 200],
 			["Salary - (January)", 200]];
