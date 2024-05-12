@@ -1,7 +1,7 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
 		var footerx = "Last updated (12.05.2024)";
-		var h1 = "<h1>Haradhan, Ananda 3, Amio 1 কিস্তি বাকি।</h1>";780
+		var h1 = "<h1>Haradhan, Ananda 2, Amio 1 কিস্তি বাকি।</h1>";
 		
 		var vx = [//ADMIN
 			["01) Chotan Halder", 6000],
@@ -35,7 +35,7 @@
 			["AS0018 - Sushanta Halder","09.04.2024",3000,30,180,0,0,"00"],
 			["AS0016 - Amio Sarkar","26.03.2024",6000,60,360,0,140,"00"],
 			["AS0012 - Subrata Halder","26.02.2024",10000,100,0,5500,0,"15"],
-			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,2700,400,"17"],
+			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,3000,1200,"16"],
 			["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,0,2100,50,"12"],
 			["AS0007 - Bapi Pramanik","24.01.2024",10000,100,0,7500,0,"11"],
 			["AS0005 - Bipul Halder","09.01.2024",20000,200,4800,0,0,"00"],
