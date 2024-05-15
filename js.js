@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (12.05.2024)";
+		var footerx = "Last updated (15.05.2024)";
 		var h1 = "<h1>Haradhan, Ananda 2, Amio 1 কিস্তি বাকি।</h1>";
 		
 		var vx = [//ADMIN
@@ -15,10 +15,10 @@
 			["09) Subrata Mondal", 6000],
 			["10) Upanada Halder", 6000],
 			["11) Pravat Biswas", 6000],
-			["12) Rajib Mondal", 6000],
-			["13) Sourav Halder", 6000]];
+			["12) Rajib Mondal", 6000]];
 
 		var vy = [ //EXPENSES
+["Sourav Halder - ", 700],
 ["Salary - (April)", 300],
 			["Salary - (March)", 200],
 			["Salary - (February)", 200],
@@ -29,17 +29,17 @@
 ["AS0026 - Susanto Halder","07.05.2024",8000,80,0,0,0,"00"],
 ["AS0025 - Suman Halder","26.04.2024",3000,30,0,0,0,"00"], 
 ["AS0024 - Chandan halder","26.04.2024",6000,60,0,0,0,"00"],
-			["AS0022 - Sudip sarkar","15.04.2024",7000,70,0,0,0,"00"],
-			["AS0021 - Sujoy Halder","15.04.2024",4000,40,0,0,0,"00"],
+			["AS0022 - Sudip sarkar","15.04.2024",7000,70,420,0,0,"00"],
+			["AS0021 - Sujoy Halder","15.04.2024",4000,40,240,0,0,"00"],
 			["AS0020 - Amio Sarkar","10.04.2024",10000,100,0,2000,1200,"22"],
 			["AS0018 - Sushanta Halder","09.04.2024",3000,30,180,0,0,"00"],
 			["AS0016 - Amio Sarkar","26.03.2024",6000,60,360,0,140,"00"],
 			["AS0012 - Subrata Halder","26.02.2024",10000,100,0,5500,0,"15"],
 			["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,3000,1200,"16"],
 			["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,0,2100,50,"12"],
-			["AS0007 - Bapi Pramanik","24.01.2024",10000,100,0,7500,0,"11"],
+			["AS0007 - Bapi Pramanik","24.01.2024",10000,100,0,8000,0,"10"],
 			["AS0005 - Bipul Halder","09.01.2024",20000,200,4800,0,0,"00"],
-			["AS0003 - Sima Pramanik","11.01.2024",10000,100,0,8500,0,"09"],
+			["AS0003 - Sima Pramanik","11.01.2024",10000,100,0,9000,0,"08"],
 			["AS0002 - Sujoy Halder","05.01.2024",10000,100,0,9500,100,"07"],
 			["AS0001 - Haradhan Halder","03.01.2024",10000,100,0,6000,0,"14"],
 
