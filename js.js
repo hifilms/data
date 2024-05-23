@@ -1,7 +1,7 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
 		var footerx = "Last updated (23.05.2024)";
-		var h1 = "<h1>Haradhan, Ananda 2, Amio 1 কিস্তি বাকি।</h1>";
+		var h1 = "<h1>Haradhan, Ananda 3, Amio 2,subrata 1 কিস্তি বাকি।</h1>";
 		
 		var vx = [//ADMIN
 			["01) Chotan Halder", 6000],
