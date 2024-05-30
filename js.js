@@ -25,7 +25,7 @@
 			["Salary - (January)", 200]];
 
 		var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
-["AS0030 - Chandan Halder","24.05.2024",4000,00,0,0,0,"Gold"],
+
 ["AS0029 - Dipu Biswas","16.05.2024",2000,20,0,0,0,"00"],
 ["AS0028 - Dipa Halder","14.05.2024",8000,80,0,0,0,"Gold"],
 ["AS0027 - Suman Halder","8.05.2024",2000,20,0,0,0,"Gold"],
@@ -46,6 +46,7 @@
 			["AS0002 - Sujoy Halder","05.01.2024",10000,100,0,10000,100,"06"],
 			["AS0001 - Haradhan Halder","03.01.2024",10000,100,0,6000,0,"14"],
 
+["AS0030 - Chandan Halder","24.05.2024",4000,40,4000,200,0,"Paid"],
 ["AS0006 - Sushanta Halder","21.01.2024",10000,100,500,10000,400,"Paid"],
 ["AS0023 - Dipankar Mridha","22.04.2024",3000,30,100,3000,0,"Paid"],
 ["AS0019 - Vola Halder","10.04.2024",6000,60,300,6000,0,"Paid"],
