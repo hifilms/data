@@ -18,8 +18,8 @@
 			["12) Rajib Mondal", 6000]];
 
 		var vy = [ //EXPENSES
-["Sourav Halder - (Left)", 700],
-["Salary - (April)", 300],
+ ["Sourav Halder - (Left)", 700],
+ ["Salary - (April)", 300],
 			["Salary - (March)", 200],
 			["Salary - (February)", 200],
 			["Salary - (January)", 200]];
