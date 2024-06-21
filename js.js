@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (19.06.2024)";
+		var footerx = "Last updated (21.06.2024)";
 		var h1 = "";//
 		
 		var vx = [//ADMIN
@@ -34,7 +34,7 @@
 
 ["AS0025 - Suman Halder","26.04.2024",3000,30,0,0,0,"Phone(1)"], 
 ["AS0024 - Chandan halder","26.04.2024",6000,60,0,0,0,"Phone(1)"],
-			["AS0022 - Sudip sarkar","15.04.2024",7000,70,420,0,0,"00(1)"],
+			["AS0022 - Sudip sarkar","15.04.2024",7000,70,840,0,0,"00"],
 			["AS0018 - Sushanta Halder","09.04.2024",3000,30,180,0,0,"00(1)"],
 			["AS0016 - Amio Sarkar","26.03.2024",6000,60,720,0,780,"00"],
 			["AS0012 - Subrata Halder","26.02.2024",10000,100,0,7500,0,"11(1)"],
