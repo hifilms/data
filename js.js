@@ -53,7 +53,7 @@ var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 
 ["AS0000 - Others","2024-2025",3500,00,0,00,0,"Other"],
 
 //paid.............	
-["AS0031 - Sujoy Halder","07.06.2024",10000,100,3000,10000,1200,"Paid"],			
+["AS0031 - Sujoy Halder","07.06.2024",10000,100,3000,10000,1700,"Paid"],			
 ["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,900,3000,750,"Paid"],
 ["AS0036 - Subrata Halder","14.07.2024",10000,100,1500,10000,0,"Paid"],
 ["AS0016 - Amio Sarkar","26.03.2024",6000,60,1800,6000,1000,"Paid"],
