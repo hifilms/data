@@ -32,7 +32,7 @@
 
 var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
 	
-["AS0046 - Sima Pramanik","12.11.2024",10000,100,00,00,00,"26"
+["AS0046 - Sima Pramanik","12.11.2024",10000,100,00,00,00,"26"],
 ["AS0045 - Sujoy Halder","18.10.2024",10000,100,0,1000,00,"24(2)"],	
 ["AS0044 - Ritam dutta","04.10.2024",10000,100,500,0,0,"00"],	
 ["AS0043 - Pinki Halder","08.10.2024",10000,100,500,0,0,"00"],	
@@ -55,7 +55,7 @@ var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 
 
 //paid.............	
 
-["AS0032 - Sima Pramanik","25.06.2024",10000,100,3000,10000,200,"Paid",
+["AS0032 - Sima Pramanik","25.06.2024",10000,100,3000,10000,200,"Paid"],
 ["AS0031 - Sujoy Halder","07.06.2024",10000,100,3000,10000,1700,"Paid"],			
 ["AS0010 - Ajay Swarnakar","07.02.2024",3000,30,900,3000,750,"Paid"],
 ["AS0036 - Subrata Halder","14.07.2024",10000,100,1500,10000,0,"Paid"],
