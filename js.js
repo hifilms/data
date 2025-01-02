@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (25.12.2024)";
+		var footerx = "Last updated (2.02.2025)";
 		var h1 = "";//
 		
 		var vx = [//ADMIN
@@ -18,34 +18,27 @@
 			["12) Rajib Mondal", 6000]];
 
 		var vy = [ //EXPENSES
-["Salary - (December)", 500],
-["Salary - (November)", 500],
-["Salary - (October)", 500],
-["Salary - (september)", 500],
-["Salary - (August)", 500],
-["Salary - (July)", 500],
-["Salary - (June)", 500],
-["Salary - (May)", 500],
-["Sourav Halder - (Left)", 700],
-["Salary - (April)", 300],
-["Salary - (March)", 200],
-["Salary - (February)", 200],
-["Salary - (January)", 200]];
+["Celebration Absent(3) - (2025)", 1764],
+["Birthday Celebration - (2025)", 5300],
+["Birthday Decoration - (2025)", 1000],
+["Salary - (2024)", 4900],
+["Sourav Halder - (Left)", 700]];
 
 var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
+["AS0048 - Mongal Biswas(ali)","31.12.2024",10000,100,00,00,00,"26"],
 ["AS0047 - Sudipta Saha","13.11.2024",8000,80,400,00,00,"00"],
-["AS0046 - Sima Pramanik","12.11.2024",10000,100,00,3000,00,"20"],
-["AS0045 - Sujoy Halder","18.10.2024",10000,100,0,4500,00,"19(1)"],	
+["AS0046 - Sima Pramanik","12.11.2024",10000,100,00,3000,00,"20(1)"],
+["AS0045 - Sujoy Halder","18.10.2024",10000,100,0,4500,00,"19(2)"],	
 ["AS0044 - Ritam dutta","04.10.2024",10000,100,1000,0,0,"00"],	
 ["AS0043 - Pinki Halder","08.10.2024",10000,100,1000,0,0,"00"],	
 ["AS0042 - Chanchal Halder","08.10.2024",5000,50,500,0,0,"00"],	
-["AS0041 - Subrata Halder","07.10.2024",5000,50,00,2500,0,"16(1)"],	
-["AS0040 - Suraj sarkar","30.09.2024",10000,100,00,6000,00,"14"],
-["AS0039 - Nikhil Halder","16.09.2024",5000,50,00,2250,00,"19(4)"],
+["AS0041 - Subrata Halder","07.10.2024",5000,50,00,2500,0,"16(2)"],	
+["AS0040 - Suraj sarkar","30.09.2024",10000,100,00,6000,00,"14(1)"],
+["AS0039 - Nikhil Halder","16.09.2024",5000,50,00,2750,00,"19(3)"],
 ["AS0038 - Amio Sarkar","15.09.2024",10000,100,500,0,00,"00(2)"],
-["AS0037 - Bimal Halder","02.08.2024",10000,100,00,8600,0,"2"],
+["AS0037 - Bimal Halder","02.08.2024",10000,100,750,10000,0,"1"],
 
-["AS0033 - Bapi Pramanik","25.06.2024",10000,100,0,9500,200,"7(6)"],
+["AS0033 - Bapi Pramanik","25.06.2024",10000,100,0,9500,200,"7(7)"],
 ["AS0028 - Dipa Halder","14.05.2024",8000,80,2880,0,0,"Gold(1)"],
 ["AS0027 - Suman Halder","8.05.2024",2000,20,0,0,0,"Gold(7)"],
 ["AS0022 - Sudip sarkar","15.04.2024",7000,70,1680,7000,660,"00(3)"],
@@ -53,7 +46,7 @@ var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 
 ["AS0011 - Ananda Swarnakar","19.02.2024",6000,60,0,4200,1300,"12(12)"],
 ["AS0005 - Bipul Halder","09.01.2024",20000,200,8400,10000,100,"00(1)"],
 ["AS0001 - Haradhan Halder","03.01.2024",10000,100,0,9000,0,"08(8)"],
-["AS0000 - Others","2024-2025",3000,00,100,00,0,"Other"],
+["AS0000 - Others","2024-2025",5600,00,100,00,0,"Other"],
 
 //paid.............	
 ["AS0034 - Kakoli Pramanik","26.06.2024",5000,50,1500,5000,0,"Paid"],
