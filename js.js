@@ -1,6 +1,6 @@
 		var passwordx = "AS0013";
 		var headerx = "অগ্রদূত সমিতি";
-		var footerx = "Last updated (15.02.2025)";
+		var footerx = "Last updated (15.01.2025)";
 		var h1 = "";//
 		
 		var vx = [//ADMIN
