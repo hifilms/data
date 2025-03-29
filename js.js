@@ -26,6 +26,7 @@
 ["Sourav Halder - (Left)", 700]];
 
 var ary = [ //1.Name, 2.date, 3.amount, 4.charge, 5.interest, 6.return, 7.fine, 8.installment
+["AS0050 - Palbon Biswas","10.03.2025",10000,00,00,00,00,"00"],	
 ["AS0049 - Rana debnath","06.02.2025",6000,00,300,00,00,"00"],	
 ["AS0048 - Mongal Biswas(ali)","31.12.2024",10000,100,00,5500,00,"15(1)"],
 ["AS0047 - Sudipta Saha","13.11.2024",10000,80,1800,00,00,"00"],
