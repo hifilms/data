@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi MUSIC - Pro</title>
+    <style>
+        :root { 
+            --bg-white: #ffffff; --text-black: #000000; --gray-light: #f9f9f9; 
+            --accent: #ff0000; --btn-bg: #f0f0f0; --border-color: #eeeeee;
+            --highlight-bg: #f2f2f2; 
+        }
+
+        /* ডার্ক মোড সাপোর্ট */
+        body.dark-theme {
+            --bg-white: #121212; --text-black: #ffffff; --gray-light: #1e1e1e;
+            --btn-bg: #333333; --border-color: #333333;
+            --highlight-bg: #252525; 
+        }
+
+        * { scrollbar-width: none; -ms-overflow-style: none; box-sizing: border-box; }
+        *::-webkit-scrollbar { display: none; }
+
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-white); color: var(--text-black); overflow-x: hidden; transition: 0.3s; }
+
+        header { position: fixed; top: 0; width: 100%; height: 60px; background: var(--bg-white); display: flex; align-items: center; justify-content: space-between; padding: 0 15px; border-bottom: 1px solid var(--border-color); z-index: 1000; }
+        
+        main { padding-bottom: 90px; }
+
+        /* হিরো স্লাইডার সেকশন */
+        #hero-slider { margin-top: 60px; width: 100%; height: 230px; position: relative; overflow: hidden; }
+        .slide-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; height: 100%; scroll-behavior: smooth; }
+        .slide { min-width: 100%; scroll-snap-align: start; position: relative; cursor: pointer; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .slide-info { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 20px 15px; color: #fff; pointer-events: none; }
+        .slide-info h4 { margin: 0; font-size: 16px; font-weight: bold; }
+        .slide-info p { margin: 5px 0 0; font-size: 12px; color: #ccc; }
+
+        .slider-counter { position: absolute; top: 10px; right: 15px; background: rgba(0,0,0,0.5); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 12px; z-index: 10; }
+
+        .duration-badge { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.8); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: bold; z-index: 5; }
+
+        .video-card { min-width: 160px; height: 100px; border-radius: 12px; overflow: hidden; position: relative; cursor: pointer; border: 1px solid var(--border-color); }
+        .thumb { width: 100%; height: 100%; object-fit: cover; }
+        .card-overlay { position: absolute; inset: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; }
+        .v-title { color: #fff; font-size: 11px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        
+        .horizontal-scroll { display: flex; overflow-x: auto; gap: 12px; padding: 10px 15px 20px; }
+        .section-header { padding: 15px 15px 0; display: flex; justify-content: space-between; align-items: center; }
+
+        .mood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; }
+        .mood-card { position: relative; height: 100px; border-radius: 12px; overflow: hidden; cursor: pointer; }
+        .mood-card img { width: 100%; height: 100%; object-fit: cover; }
+        .mood-name { position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 16px; }
+
+        /* প্লেয়ার ওভারলে */
+        #player-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-white); z-index: 2000; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
+        .player-hidden { transform: translateY(100%); }
+        .video-box { width: 100%; aspect-ratio: 16/9; background: #000; }
+        
+        .circle-btn { width: 42px; height: 42px; border-radius: 50%; background: var(--btn-bg); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s; }
+
+        .p-list-item { display: flex; align-items: center; padding: 12px 15px; gap: 12px; border-bottom: 1px solid var(--border-color); cursor: pointer; transition: 0.2s; }
+        .p-thumb-box { position: relative; width: 100px; flex-shrink: 0; }
+        .p-thumb { width: 100%; aspect-ratio: 16/9; border-radius: 6px; object-fit: cover; }
+        
+        .active-track { 
+            background: var(--highlight-bg) !important; 
+        }
+        .active-track .v-list-title {
+            font-weight: bold !important;
+        }
+
+        #mini-player { position: fixed; bottom: 0; left: 0; right: 0; height: 75px; background: var(--bg-white); border-top: 1px solid var(--border-color); display: flex; align-items: center; padding: 0 12px; z-index: 1500; }
+        .mini-thumb-wrapper { width: 85px; aspect-ratio: 16/9; border-radius: 6px; overflow: hidden; position: relative; flex-shrink: 0; margin-right: 12px; }
+        .mini-thumb { width: 100%; height: 100%; object-fit: cover; }
+        .track-count-badge { position: absolute; bottom: 3px; right: 3px; background: #fff; color: #000; font-size: 9px; padding: 2px 5px; border-radius: 4px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+        /* বটম শিট মেনু */
+        #menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 3000; display: none; opacity: 0; transition: 0.3s; }
+        #bottom-sheet { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-white); border-radius: 20px 20px 0 0; z-index: 3001; transform: translateY(100%); transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); padding: 15px 0; border-top: 1px solid var(--border-color); }
+        .menu-item { display: flex; align-items: center; padding: 15px 20px; gap: 15px; cursor: pointer; border-bottom: 1px solid var(--border-color); }
+        .menu-item span { flex: 1; font-size: 15px; font-weight: 500; }
+
+        .hidden { display: none !important; }
+        .icon-active { fill: #ff0000 !important; stroke: #ff0000 !important; }
+        svg { cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="display:flex; align-items:center; gap:10px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/3844/3844724.png" width="35">
+            <span style="font-weight:bold; font-size:18px;">Hi MUSIC</span>
+        </div>
+        <div class="circle-btn" style="width:35px; height:35px; background:transparent;" onclick="toggleMenu(true)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-slider">
+            <div class="slider-counter" id="s-counter">1/0</div>
+            <div class="slide-container" id="slider-inner" onscroll="updateSliderCounter()"></div>
+        </section>
+
+        <div id="bookmark-section" class="hidden">
+            <div class="section-header">
+                <div style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+                    <h3 style="margin:0;">Bookmarked</h3>
+                    <div onclick="playVideo('Bookmarks', 0, true)" style="color:red; font-size:14px; font-weight:bold; cursor:pointer;">More ></div>
+                </div>
+            </div>
+            <div class="horizontal-scroll" id="bookmark-list"></div>
+        </div>
+
+        <div id="dynamic-content"></div>
+    </main>
+
+    <div id="menu-overlay" onclick="toggleMenu(false)"></div>
+    <div id="bottom-sheet">
+        <div style="width:40px; height:5px; background:#ccc; border-radius:10px; margin:0 auto 15px;"></div>
+        <div class="menu-item" onclick="toggleDarkMode()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span id="theme-text">Dark Mode</span>
+        </div>
+        <div class="menu-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>About Us</span>
+        </div>
+        <div class="menu-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Legal Policy</span>
+        </div>
+    </div>
+
+    <div id="player-overlay" class="player-hidden">
+        <div class="video-box"><div id="youtube-player"></div></div>
+        <div class="now-playing-info" style="padding:15px; display:flex; justify-content:space-between; align-items:center;">
+            <div style="flex:1; overflow:hidden;">
+                <h3 id="cur-title" style="margin:0; font-size:18px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">গানের নাম</h3>
+                <p id="cur-artist" style="margin:5px 0 0; color:#666;">শিল্পী</p>
+            </div>
+            <div class="circle-btn" onclick="togglePlayer(false)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+            </div>
+        </div>
+        <div id="p-list" style="overflow-y:auto; flex:1;"></div>
+    </div>
+
+    <div id="mini-player" class="hidden">
+        <div class="mini-thumb-wrapper" onclick="togglePlayer(true)">
+            <img id="m-thumb" class="mini-thumb" src="">
+            <span id="m-count-badge" class="track-count-badge">0/0</span>
+        </div>
+        <div style="flex-grow:1; overflow:hidden;" onclick="togglePlayer(true)">
+            <div id="m-title" style="font-size:13px; font-weight:bold; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">গানের নাম</div>
+            <div id="m-artist" style="font-size:11px; color:#777;">শিল্পী</div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; padding-right:5px;">
+            <div class="circle-btn" style="width:38px; height:38px; background: var(--btn-bg);" onclick="playNextVideo(false)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+            </div>
+            <div class="circle-btn" style="width:38px; height:38px; background: var(--btn-bg);" onclick="togglePlayer(true)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let db = {}; let player; let currentCat = ''; let currentIndex = 0; let isPlayerReady = false;
+        let bookmarks = JSON.parse(localStorage.getItem('hi_music_bookmarks')) || [];
+
+        function toggleMenu(show) {
+            const overlay = document.getElementById('menu-overlay');
+            const sheet = document.getElementById('bottom-sheet');
+            if(show) {
+                overlay.style.display = 'block';
+                setTimeout(() => { overlay.style.opacity = '1'; sheet.style.transform = 'translateY(0)'; }, 10);
+            } else {
+                overlay.style.opacity = '0';
+                sheet.style.transform = 'translateY(100%)';
+                setTimeout(() => { overlay.style.display = 'none'; }, 300);
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            document.getElementById('theme-text').innerText = isDark ? 'Light Mode' : 'Dark Mode';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '100%', width: '100%',
+                playerVars: { 'autoplay': 1, 'controls': 1, 'rel': 0, 'modestbranding': 1 },
+                events: { 'onReady': () => { isPlayerReady = true; }, 'onStateChange': (e) => { if(e.data == YT.PlayerState.ENDED) playNextVideo(false); } }
+            });
+        }
+
+        function playNextVideo(showOverlay = false) {
+            let playlist = (currentCat === 'Bookmarks') ? bookmarks : db.Bengali[currentCat].v;
+            if (currentIndex + 1 < playlist.length) playVideo(currentCat, currentIndex + 1, showOverlay);
+        }
+
+        async function initApp() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.getElementById('theme-text').innerText = 'Light Mode';
+            }
+            try {
+                const res = await fetch('data.json');
+                db = await res.json();
+                const data = db.Bengali;
+                const slider = document.getElementById('slider-inner');
+                const content = document.getElementById('dynamic-content');
+
+                let sHTML = '', cHTML = '', mHTML = `<div class="section-header"><div style="display:flex; justify-content:space-between; width:100%; align-items:center;"><h3 style="margin:0;">Moods</h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div></div><div class="mood-grid">`;
+
+                for (let key in data) {
+                    if (!isNaN(key)) {
+                        let fv = data[key].v[0];
+                        sHTML += `<div class="slide" onclick="playVideo('${key}',0, true)"><img src="https://img.youtube.com/vi/${fv[0]}/maxresdefault.jpg"><div class="slide-info"><h4>${fv[1]}</h4><p>${fv[2]}</p></div></div>`;
+                        cHTML += `<div class="section-header"><div style="display:flex; justify-content:space-between; width:100%; align-items:center;"><h3 style="margin:0;">${data[key].t}</h3><div onclick="playVideo('${key}',0, true)" style="color:red; font-size:14px; font-weight:bold; cursor:pointer;">More ></div></div></div><div class="horizontal-scroll">`;
+                        data[key].v.forEach((v, i) => {
+                            cHTML += `<div class="video-card" onclick="playVideo('${key}',${i}, true)"><span class="duration-badge">${v[3]}</span><img class="thumb" src="https://img.youtube.com/vi/${v[0]}/mqdefault.jpg"><div class="card-overlay"><div class="v-title">${v[1]}</div></div></div>`;
+                        });
+                        cHTML += `</div>`;
+                    } else {
+                        mHTML += `<div class="mood-card" onclick="playVideo('${key}',0, true)"><img src="${data[key].i}"><div class="mood-name">${data[key].t}</div></div>`;
+                    }
+                }
+                slider.innerHTML = sHTML;
+                content.innerHTML = cHTML + mHTML + '</div>';
+                document.getElementById('s-counter').innerText = `1/${slider.children.length}`;
+                renderBookmarks();
+                setInterval(() => {
+                    if(slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) slider.scrollTo({left:0, behavior:'smooth'});
+                    else slider.scrollBy({left:slider.offsetWidth, behavior:'smooth'});
+                }, 5000);
+            } catch (e) { console.error(e); }
+        }
+
+        function toggleBookmark(cat, index, event) {
+            event.stopPropagation();
+            let video = (cat === 'Bookmarks') ? [bookmarks[index].id, bookmarks[index].title, bookmarks[index].artist, bookmarks[index].duration] : db.Bengali[cat].v[index];
+            const videoId = video[0];
+            const bIndex = bookmarks.findIndex(b => b.id === videoId);
+            if (bIndex > -1) bookmarks.splice(bIndex, 1);
+            else bookmarks.push({ id: videoId, title: video[1], artist: video[2], duration: video[3], cat: cat, index: index });
+            localStorage.setItem('hi_music_bookmarks', JSON.stringify(bookmarks));
+            renderBookmarks();
+            updatePlaylistUI(currentCat, currentIndex);
+        }
+
+        function renderBookmarks() {
+            const section = document.getElementById('bookmark-section');
+            if (bookmarks.length === 0) { section.classList.add('hidden'); return; }
+            section.classList.remove('hidden');
+            let bHTML = '';
+            bookmarks.slice(-10).reverse().forEach((b, i) => {
+                const actualIndex = bookmarks.length - 1 - i;
+                bHTML += `<div class="video-card" onclick="playVideo('Bookmarks',${actualIndex}, true)"><span class="duration-badge">${b.duration}</span><img class="thumb" src="https://img.youtube.com/vi/${b.id}/mqdefault.jpg"><div class="card-overlay"><div class="v-title">${b.title}</div></div></div>`;
+            });
+            document.getElementById('bookmark-list').innerHTML = bHTML;
+        }
+
+        function playVideo(cat, index, showOverlay = true) {
+            currentCat = cat; currentIndex = index;
+            let vid = (cat === 'Bookmarks') ? [bookmarks[index].id, bookmarks[index].title, bookmarks[index].artist, bookmarks[index].duration] : db.Bengali[cat].v[index];
+            if (isPlayerReady) player.loadVideoById(vid[0]);
+            document.getElementById('cur-title').innerText = vid[1];
+            document.getElementById('cur-artist').innerText = vid[2];
+            document.getElementById('m-title').innerText = vid[1];
+            document.getElementById('m-artist').innerText = vid[2];
+            document.getElementById('m-thumb').src = `https://img.youtube.com/vi/${vid[0]}/mqdefault.jpg`;
+            document.getElementById('m-count-badge').innerText = `${index + 1}/${cat === 'Bookmarks' ? bookmarks.length : db.Bengali[cat].v.length}`;
+            updatePlaylistUI(cat, index);
+            if(showOverlay) togglePlayer(true);
+            else document.getElementById('mini-player').classList.remove('hidden');
+        }
+
+        function updatePlaylistUI(cat, index) {
+            let listHTML = '';
+            let playlist = (cat === 'Bookmarks') ? bookmarks.map(b => [b.id, b.title, b.artist, b.duration]) : (db.Bengali[cat] ? db.Bengali[cat].v : null);
+            if (!playlist) return;
+            playlist.forEach((v, i) => {
+                const isBookmarked = bookmarks.some(b => b.id === v[0]);
+                listHTML += `
+                <div class="p-list-item ${i===index?'active-track':''}" onclick="playVideo('${cat}',${i}, true)">
+                    <div class="p-thumb-box">
+                        <img class="p-thumb" src="https://img.youtube.com/vi/${v[0]}/mqdefault.jpg">
+                        <span class="duration-badge" style="top:auto; bottom:4px;">${v[3]}</span>
+                    </div>
+                    <div style="flex:1; overflow:hidden;">
+                        <div class="v-list-title" style="font-size:14px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${v[1]}</div>
+                        <div style="font-size:12px; color:#777;">${v[2]}</div>
+                    </div>
+                    <div class="circle-btn" style="width:35px; height:35px;" onclick="toggleBookmark('${cat}',${i}, event)">
+                        <svg class="${isBookmarked ? 'icon-active' : ''}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                </div>`;
+            });
+            document.getElementById('p-list').innerHTML = listHTML;
+        }
+
+        function updateSliderCounter() {
+            const slider = document.getElementById('slider-inner');
+            const idx = Math.round(slider.scrollLeft / slider.offsetWidth) + 1;
+            const counter = document.getElementById('s-counter');
+            if(counter) counter.innerText = `${idx}/${slider.children.length || 0}`;
+        }
+
+        function togglePlayer(show) {
+            document.getElementById('player-overlay').classList.toggle('player-hidden', !show);
+            document.getElementById('mini-player').classList.toggle('hidden', show);
+        }
+
+        window.onload = initApp;
+    </script>
+</body>
+</html>
